@@ -1,6 +1,5 @@
 import { Typography } from '@mui/material';
 import { makeStyles } from '@mui/styles';
-import { trimTo } from '../helper';
 import { Song } from '../type';
 import SongItem from './SongItem';
 
@@ -21,7 +20,7 @@ const SongList = ({ songs }: propType) => {
         <SongItem
           key={song.id}
           id={song.id}
-          title={trimTo(song.title, 25)}
+          title={song.title}
           subtitle={song.subtitle}
           image={song.image}
         />
