@@ -1,0 +1,59 @@
+@use '../../sass/variables' as *;
+
+.song {
+  &:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    @media screen and (max-width: $md-sm) {
+      h3 {
+        font-size: 16px;
+      }
+    }
+
+    cite {
+      font-style: normal;
+      @media screen and (max-width: $md-sm) {
+        font-size: 12px;
+      }
+    }
+    background-color: #fff;
+
+    display: flex;
+    align-items: center;
+
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 4px;
+    transition: 0.2s all;
+    overflow: hidden;
+    outline: none;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-secondary);
+      color: #fff;
+      transform: translateY(-5px);
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+        rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    }
+
+    &:active {
+      transform: translateY(-3px);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 6px 14px;
+    }
+
+    &--left {
+      width: 100px;
+      @media screen and (max-width: $md-sm) {
+        width: 80px;
+      }
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+  }
+}

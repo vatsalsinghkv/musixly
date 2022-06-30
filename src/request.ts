@@ -4,7 +4,7 @@ const requests = {
   getSearchURL(name: string) {
     return `/search?term=${name}&locale=${locale}`;
   },
-  getSongDetailsURL(key: string) {
+  getSongDetailsURL(key: string | undefined) {
     return `/songs/get-details?key=${key}&locale=${locale}`;
   },
 };

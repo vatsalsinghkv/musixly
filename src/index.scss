@@ -1,0 +1,40 @@
+@use './sass/variables' as *;
+@use 'sass:math';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+a:link,
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+a,
+button,
+input,
+label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.5;
+  color: var(--color-primary);
+  // min-height: 100vh;
+}
+
+.icon-attribute {
+  text-align: center;
+  margin-top: -8px;
+  display: block;
+  width: 100%;
+  font-size: 0.75rem;
+  color: var(--color-grey-2);
+}
