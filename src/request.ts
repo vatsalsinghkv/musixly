@@ -1,9 +1,11 @@
+const locale = navigator?.language ?? 'en-US';
+
 const requests = {
-  search(name: string) {
-    return `/search?term=${name}`;
+  getSearchURL(name: string) {
+    return `/search?term=${name}&locale=${locale}`;
   },
-  song(id: string) {
-    return `/search?id=${id}`;
+  getSongDetailsURL(key: string) {
+    return `/songs/get-details?key=${key}&locale=${locale}`;
   },
 };
 
